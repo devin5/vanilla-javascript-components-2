@@ -49,12 +49,17 @@ console.log(friends)
     i = document.createElement('p');
     j = document.createElement('p');
     k = document.createElement('p');
-  
-  
+    button = document.createElement('a')
+
+ 
+   
     a.appendChild(b);
     a.appendChild(c);
     c.appendChild(d);
+
+   
     c.appendChild(e);
+    c.append(button)
     c.appendChild(f);
     c.appendChild(g);
  
@@ -62,24 +67,30 @@ console.log(friends)
     c.appendChild(j)
     c.appendChild(k)
     
+    
     a.classList.add('card')
     c.classList.add('card-info')
     d.classList.add('name')
     e.classList.add('username')
+    button.classList.add('button1')
+  
   
     b.setAttribute('src', object.avatar_url);
     d.textContent = object.name;
     e.textContent = object.login;
     f.textContent = object.location;
-    g.textContent = "Profile: ";
+    // g.textContent = "Profile: ";
+    button.textContent = "Veiw My Github"
+    button.href = object.html_url;
     h.href = object.html_url;
-    var text = document.createTextNode(object.url)
-    h.appendChild(text)
+    // var text = document.createTextNode(object.url)
+    // h.appendChild(text)
     g.appendChild(h);
     // i.textContent = 'Followers: ' + object.followers;
     // j.textContent = 'Following: ' + object.following;
     // k.textContent = 'Bio: ' + object.bio;
   
+
   
     console.log(a)
     return a

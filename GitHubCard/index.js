@@ -1,23 +1,38 @@
+// var friends = [
+//   'tetondan',
+//   'dustinmyers',
+//   'justsml',
+//   'luishrd',
+//   'bigknell'
+// ]
+
 var friends = [
-  'tetondan',
-  'dustinmyers',
-  'justsml',
-  'luishrd',
-  'bigknell'
+ 
 ]
 
 container = document.querySelector('.cards')
 
-friends.forEach(item => {
-  axios.get('https://api.github.com/users/' + item)
-    .then( response => {
-      console.log(response)
-        container.appendChild(createCard(response))
-    })
-    .catch( error => {
-        console.log("Error:", error);
-    }) 
+axios.get("https://api.github.com/users/devin5/followers")
+.then( res =>  {
+  console.log(res)
+  res.data.forEach( item => {
+    container.appendChild(createCard(item))
+  })
 })
+.catch( error => console.log("error:", error))
+
+console.log(friends)
+
+// friends.forEach(item => {
+//   axios.get('https://api.github.com/users/' + item)
+//     .then( response => {
+//       console.log(response)
+//         container.appendChild(createCard(response))
+//     })
+//     .catch( error => {
+//         console.log("Error:", error);
+//     }) 
+// })
 
  
 
@@ -52,18 +67,18 @@ friends.forEach(item => {
     d.classList.add('name')
     e.classList.add('username')
   
-    b.setAttribute('src', object.data.avatar_url);
-    d.textContent = object.data.name;
-    e.textContent = object.data.login;
-    f.textContent = object.data.location;
+    b.setAttribute('src', object.avatar_url);
+    d.textContent = object.name;
+    e.textContent = object.login;
+    f.textContent = object.location;
     g.textContent = "Profile: ";
-    h.href = object.data.html_url;
-    var text = document.createTextNode(object.data.url)
+    h.href = object.html_url;
+    var text = document.createTextNode(object.url)
     h.appendChild(text)
     g.appendChild(h);
-    i.textContent = 'Followers: ' + object.data.followers;
-    j.textContent = 'Following: ' + object.data.following;
-    k.textContent = 'Bio: ' + object.data.bio;
+    // i.textContent = 'Followers: ' + object.followers;
+    // j.textContent = 'Following: ' + object.following;
+    // k.textContent = 'Bio: ' + object.bio;
   
   
     console.log(a)
@@ -73,7 +88,7 @@ friends.forEach(item => {
   
   
   
- 
+
   
   
   

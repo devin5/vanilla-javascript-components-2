@@ -63,7 +63,7 @@ body {
 }
 .container {
   max-width: 800px;
-  margin: 50px auto;
+  margin: 10px auto;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -81,6 +81,7 @@ body {
 .header img {
   width: 150px;
   height: 150px;
+  margin: 0 auto;
 }
 
 .header p {

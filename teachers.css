@@ -1,0 +1,298 @@
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset above, our CSS below */
+
+html,
+body,
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  background: linear-gradient(to top right, #bdc3c7 0%, #2c3e50
+  100%);}
+.container {
+  max-width: 800px;
+  margin: 10px auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 50px; */
+}
+
+header img {
+  width: 130px;
+  /* height: 70px; */
+  margin : 3% 3%;
+}
+
+header h1 {
+  font-size: 5rem;
+  margin-right: 6%;
+  color: white;
+  text-shadow: 4px 3px 5px #000000;
+}
+
+
+label {
+  /* position: relative;
+  left: 80%; */
+  font-size: 70px;
+  /* line-height: 70px; */
+  cursor: pointer;
+  margin : 3% 3%;
+}
+
+.cards {
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  border-radius: 5px;
+  /* box-shadow: 0 1px 6px -2px #000; */
+  background-color: rgb(176, 178, 182);
+
+  box-shadow:
+  10px  5px 50px rgb(0, 0, 0),
+  15px 10px 5px rgb(0, 0, 0);
+  margin-bottom: 30px;
+  
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+.card .name {
+  font-size: 3.4rem;
+}
+
+.card p {
+  font-size: 1.4rem;
+  margin-bottom: 3px;
+}
+
+.card .username {
+  font-size: 3.0rem;
+  font-style: italic;
+  margin: 3% 10%;
+}
+.button1{
+  text-decoration: none;
+  position: relative;
+  top: 40;
+  left: 20;
+  padding: 7px 13px;
+  font-size: 1.6rem;
+  border-radius: 7px;
+  background: #2c3e50;
+  color: #bdc3c7;
+  transition: .5s;
+}
+.button1:hover{
+  background: #bdc3c7;
+  color: #2c3e50;
+  border: 2px solid #2c3e50;
+}
+
+nav {
+  text-align: right;
+  height: 10%;
+  line-height: 10%;
+  
+}
+.menu {
+  background: #2c3e50;
+  position: fixed;
+  /* z-index: 10; */
+  left: -30%;
+  top: 0;
+  width: 30%;
+  height: 100vh;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  /* display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center; */
+}
+
+.menu a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #bdc3c7;
+  /* margin: 0 10px; */
+  line-height: 7rem;
+  display: block;
+  border-bottom: 1px solid black;
+  transition: .6s;
+  /* width: 100%; */
+}
+
+.menu a:hover {
+  background-color: #bdc3c7;
+  color: rgb(20, 20, 20);
+  font-weight: 700;
+  color: rgb(63, 55, 55);
+}
+.menuImg {
+  width: 30%;
+  /* height: 20%; */
+  margin: 15% 0 ;
+}
+/* span {
+  color: #f4f4f7;
+} */
+
+
+
+#toggle {
+  display: none;
+}
+
+#toggle:checked + .menu {
+  left: 0;
+}
+

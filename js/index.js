@@ -20,8 +20,6 @@ axios
   })
   .catch(error => console.log("error from call to get followers:", error));
 
-// function to create card component
-
 function createCard(object) {
   mainDiv = document.createElement("div");
   avatar = document.createElement("img");
